@@ -9,7 +9,43 @@ With this project you can monitor the Zimbra mail queues using the SNMP tool you
 
 ----------
 
-### Getting started
+### Before start
+This monitoring method will need to have SNMP installed and running on the zimbra Server, the first step is to install all the needed components:
+```
+sudo apt-get install snmpd snmp snmp-mibs-downloader
+```
+
+Then replace this line on the file called /etc/default/snmpd :
+```
+# snmpd options (use syslog, close stdin/out/err).
+SNMPDOPTS='-Lsd -Lf /dev/null -u snmp -g snmp -I -smux,mteTrigger,mteTriggerConf -p /var/run/snmpd.pid'
+```
+
+For this one:
+```
+# snmpd options (use syslog, close stdin/out/err).
+SNMPDOPTS='-Lsd -Lf /dev/null -u snmp -g snmp -I -smux,mteTrigger,mteTriggerConf -p /var/run/snmpd.pid'
+```
+
+Download the snmd.conf file from this repository and save it here /etc/snmp/snmpd.conf edit the community and main point of contact.
+
+And restart the SNMP service:
+```
+sudo /etc/init.d/snmpd restart
+```
+
+You can check that everything is up and running by running the next command:
+```
+netstat -apn|grep snmpd
+udp        0      0 0.0.0.0:161             0.0.0.0:*                           13544/snmpd
+```
+
+And if you want a detailed list, run the next command:
+```
+snmpwalk -v 1 -c public -O e localhost
+```
+
+### Getting started with the Zimbra Script and SNMP
 This dashboard contains multiples sections with the goal to monitor a full Zimbra Collaboration Server, or Servers, we have some sections to monitor the Linux and machine overall performance using SNMP, and one dedicated section just to monitor Zimbra Collaboration.
 
 Download the zimbra_pflogsumm-prtg.pl Script from this repository and save it on the next path: 
