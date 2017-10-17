@@ -75,21 +75,21 @@ Zimbra Collaboration Performance
 Sample /etc/snmp/snmpd.conf with inputs for Zimbra Processes tied to the Script which creates the SNMPD OIDs:
 
 ```
-extend ZimbraReceived /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-received
-extend ZimbraDelivered /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-delivered
-extend ZimbraForwarded /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-forwarded
-extend ZimbraDeferred /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-deferred
-extend ZimbraBounced /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bounced
-extend ZimbraRejected /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-rejected
-extend ZimbraRejectWarning /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-reject-warning
-extend ZimbraHeld /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-held
-extend ZimbraDiscarded /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-discarded
-extend ZimbraBytesReceived /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bytes-received
-extend ZimbraBytesDelivered /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bytes-delivered
-extend ZimbraSenders /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-senders
-extend ZimbraSendingDomains /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-sending-domains
-extend ZimbraRecipients /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-recipients
-extend ZimbraRecipientDomains /opt/zimbra/common/bin/zimbra-pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-recipient-domains
+extend ZimbraReceived /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-received
+extend ZimbraDelivered /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-delivered
+extend ZimbraForwarded /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-forwarded
+extend ZimbraDeferred /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-deferred
+extend ZimbraBounced /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bounced
+extend ZimbraRejected /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-rejected
+extend ZimbraRejectWarning /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-reject-warning
+extend ZimbraHeld /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-held
+extend ZimbraDiscarded /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-discarded
+extend ZimbraBytesReceived /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bytes-received
+extend ZimbraBytesDelivered /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-bytes-delivered
+extend ZimbraSenders /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-senders
+extend ZimbraSendingDomains /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-sending-domains
+extend ZimbraRecipients /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-recipients
+extend ZimbraRecipientDomains /opt/zimbra/common/bin/zimbra_pflogsumm-prtg.pl -d today /var/log/zimbra.log -zimbra-recipient-domains
 ```
 
 Once this is done, restart the SNMP service and run a test to see if the SNMP has already the details of the Script:
