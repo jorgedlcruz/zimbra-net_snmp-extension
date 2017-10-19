@@ -3,6 +3,8 @@ How to monitor a Zimbra Collaboration Environment using pflogsumm and NET-SNMP-E
 
 ![alt tag](https://www.jorgedelacruz.es/wp-content/uploads/2017/08/zimbra-prtg-snmp-018.png)
 
+*Note: This project is a Community contribution, not tested neither supported officialy by Zimbra. Use it at your own risk. It might perform poorly in big environments due the need to parse the MTA logs over and over.
+
 This project uses a modified version of the popular pflogsumm script to retrieve the Zimbra Collaboration email queues information, and creates an output which we retrieve using the NET-SNMP-EXTEND, so we can monitor each sensor as an SNMP OID.
 
 With this project you can monitor the Zimbra mail queues using the SNMP tool you prefer, on this Github README we will show an example using PRTG.
