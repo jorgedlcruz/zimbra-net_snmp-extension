@@ -225,6 +225,10 @@ After monitor all values, CPU, RAM, Disk, and the Zimbra queues, you might want 
 
 ![alt tag](https://www.jorgedelacruz.es/wp-content/uploads/2017/08/zimbra-prtg-snmp-018.png)
 
+And this one just for Resources and Service and License status:
+
+![alt tag](https://www.jorgedelacruz.es/wp-content/uploads/2017/10/zimbra-prtg-services-005.png)
+
 ----------
 
 ### Coming next
